@@ -13,8 +13,18 @@ int main(void)
     {
         printf("Enter day of that week (1st January) 'N': ");
         scanf("%i", &N);
-        N -= 1;
-        printf("That day of the week is: ");
-        printf("%i\n", K % 7 + N);
-    }
+        if (N == 1)
+        {
+            N = 7;
+            printf("That day of the week is: ");
+            printf("%i\n", K % 7 + N);
+        }
+        else
+        {
+            N -= 1;
+            printf("That day of the week is: ");
+            printf("%i\n", K % 7 + N);
+        }
+
+        }
 }
